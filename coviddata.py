@@ -10,9 +10,12 @@ from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
 import numpy as np
 import requests
 
-# Set up some vars
+# Set up source data
 url = 'https://opendata.ecdc.europa.eu/covid19/casedistribution/csv'
-workingPath = '/your/working/directory/covidStats/'
+
+#Set up working directory.
+#Assumed "covidStats" exists in Home directory 
+workingPath = '~/covidStats/'
 
 newDataRequest = str(input('Do you require a refreshed dataset[y/n]? default[n] '))
 if newDataRequest == 'y' or newDataRequest == 'Y':
